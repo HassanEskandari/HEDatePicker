@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HEDatePicker'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of HEDatePicker.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/hassan.3skandari@gmail.com/HEDatePicker'
+  s.homepage         = 'https://github.com/HassanEskandari/HEDatePicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hassan.3skandari@gmail.com' => 'Hassan.Eskandari@live.com' }
-  s.source           = { :git => 'https://github.com/hassan.3skandari@gmail.com/HEDatePicker.git', :tag => s.version.to_s }
+  s.author           = { 'Hassan Eskandari' => 'Hassan.3skandari@gmail.com' }
+  s.source           = { :git => 'https://github.com/HassanEskandari/HEDatePicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
