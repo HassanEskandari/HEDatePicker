@@ -1,0 +1,22 @@
+{
+  "name": "HEDatePicker",
+  "version": "0.1.0",
+  "summary": "A short description of HEDatePicker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hassan.3skandari@gmail.com/HEDatePicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hassan.3skandari@gmail.com": "Hassan.Eskandari@live.com"
+  },
+  "source": {
+    "git": "https://github.com/hassan.3skandari@gmail.com/HEDatePicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HEDatePicker/Classes/**/*"
+}

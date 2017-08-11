@@ -1,0 +1,6 @@
+framework module HEDatePicker {
+  umbrella header "HEDatePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

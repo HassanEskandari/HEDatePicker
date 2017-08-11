@@ -1,0 +1,16 @@
+PODS:
+  - HEDatePicker (0.1.0)
+
+DEPENDENCIES:
+  - HEDatePicker (from `../`)
+
+EXTERNAL SOURCES:
+  HEDatePicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HEDatePicker: fb656bdd37eb66647d3fd13262033befb408388e
+
+PODFILE CHECKSUM: f6d99241c078734dfef3ea1f830cc92a126a7779
+
+COCOAPODS: 1.2.1

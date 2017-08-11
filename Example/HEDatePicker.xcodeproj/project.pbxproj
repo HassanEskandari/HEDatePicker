@@ -43,9 +43,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6E7C0B9050AE89D6843D7639 /* Pods-HEDatePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEDatePicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HEDatePicker_Example/Pods-HEDatePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7CABDB3A5E6586544A2BEE21 /* Pods_HEDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HEDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E02551A4196ACF5D2BA0E97 /* HEDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HEDatePicker.podspec; path = ../HEDatePicker.podspec; sourceTree = "<group>"; };
-		AEBD68C7D5046F37ABB2AAA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E07CE42B338920F9AE94EAC1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8E02551A4196ACF5D2BA0E97 /* HEDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HEDatePicker.podspec; path = ../HEDatePicker.podspec; sourceTree = "<group>"; };
+		AEBD68C7D5046F37ABB2AAA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E07CE42B338920F9AE94EAC1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F87B6C5D2F337BD9BA12C09C /* Pods-HEDatePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HEDatePicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HEDatePicker_Tests/Pods-HEDatePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
