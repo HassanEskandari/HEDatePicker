@@ -421,7 +421,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassaneskandari.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_HEDatePicker_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -455,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HEDatePicker/HEDatePicker.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hassaneskandari.HEDatePicker;
 				PRODUCT_NAME = HEDatePicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -490,6 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HEDatePicker/HEDatePicker.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hassaneskandari.HEDatePicker;
 				PRODUCT_NAME = HEDatePicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -528,7 +530,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassaneskandari.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_HEDatePicker_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -612,7 +614,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassaneskandari.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_HEDatePicker_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -695,7 +697,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hassaneskandari.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_HEDatePicker_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

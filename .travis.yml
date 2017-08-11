@@ -3,17 +3,7 @@
 # # * https://github.com/supermarin/xcpretty#usage
 #
 
-language: objective-c
-osx_image: xcode8.1
-cache: cocoapods
-podfile: Podfile
-before_install:
-- rvm install $(cat .ruby-version) 
-- rvm use $(cat .ruby-version)
-- gem install bundler
-- bundle install
-- pod repo update --silent
-- pod install
-script:
-- set -o pipefail && xcodebuild test -workspace Simcoe.xcworkspace -scheme SimcoeTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' | xcpretty
-- pod lib lint
+language: swift
+osx_image: xcode8.3
+xcode_workspace: Example/HEDatePicker.xcworkspace
+xcode_scheme: HEDatePicker-Example
