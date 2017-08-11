@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HEDatePicker_Example' do
+  pod 'HEDatePicker', :path => '../'
+
+  target 'HEDatePicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
