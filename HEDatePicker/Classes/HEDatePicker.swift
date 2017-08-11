@@ -202,6 +202,8 @@ public class HEDatePicker: UIControl {
         if dateComponent == HEDatePickerComponents.month {
             let dateFormatter = self.dateFormatter()
             return dateFormatter.monthSymbols[value - 1]
+        } else if dateComponent == .hour || dateComponent == .minute {
+            return String(format: "%02d", value)
         } else {
             return String(value)
         }
@@ -565,6 +567,14 @@ extension HEDatePicker: UIPickerViewDelegate {
             let dayComponentSizingString = NSString(string: "00")
             size = Double(dayComponentSizingString.size(attributes: stringSizingAttributes).width)
         } else if calendarComponent == .year  {
+            // Pad the year string to four digits.
+            let yearComponentSizingString = NSString(string: "00")
+            size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)
+        } else if calendarComponent == .hour  {
+            // Pad the year string to four digits.
+            let yearComponentSizingString = NSString(string: "00")
+            size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)
+        } else if calendarComponent == .minute  {
             // Pad the year string to four digits.
             let yearComponentSizingString = NSString(string: "00")
             size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)

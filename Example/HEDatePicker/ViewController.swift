@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         self.datePicker.delegate = self
         self.datePicker.identifier = .persian
         self.datePicker.locale = Locale(identifier: "fa_IR")
+        self.datePicker.pickerType = .date
 //        self.datePicker.font = IranYekanFont.regular(with: 14)
         self.datePicker.reloadAllComponents()
         
