@@ -1,6 +1,6 @@
 # HEDatePicker
 
-[![CI Status](http://img.shields.io/travis/HassanEskandari/HEDatePicker.svg?style=flat)](https://travis-ci.org/hassan.3skandari@gmail.com/HEDatePicker)
+[![CI Status](http://img.shields.io/travis/HassanEskandari/HEDatePicker.svg?style=flat)](https://travis-ci.org/HassanEskandari/HEDatePicker)
 [![Version](https://img.shields.io/cocoapods/v/HEDatePicker.svg?style=flat)](http://cocoapods.org/pods/HEDatePicker)
 [![License](https://img.shields.io/cocoapods/l/HEDatePicker.svg?style=flat)](http://cocoapods.org/pods/HEDatePicker)
 [![Platform](https://img.shields.io/cocoapods/p/HEDatePicker.svg?style=flat)](http://cocoapods.org/pods/HEDatePicker)
