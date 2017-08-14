@@ -12,8 +12,7 @@ import HEDatePicker
 class ViewController: UIViewController {
     
     @IBOutlet weak var datePicker: HEDatePicker!
-    @IBOutlet weak var label: UILabel!
-    
+    @IBOutlet weak var toggleLocaleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,25 +21,70 @@ class ViewController: UIViewController {
         self.datePicker.identifier = .persian
         self.datePicker.locale = Locale(identifier: "fa_IR")
         self.datePicker.pickerType = .date
-//        self.datePicker.font = IranYekanFont.regular(with: 14)
         self.datePicker.reloadAllComponents()
-        
-//        self.label.font = IranYekanFont.regular(with: 20)
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+ 
+    @IBAction func randomFont(_ sender: UIButton) {
+        let familyNames = UIFont.familyNames
+        let randomNumber = Int(arc4random_uniform(UInt32(familyNames.count)))
+        let familyName: String = familyNames[randomNumber]
+        let fontName: String = UIFont.fontNames(forFamilyName: familyName)[0]
+        self.datePicker.font = UIFont(name: fontName, size: 14)!
+        self.datePicker.reloadAllComponents()
+    }
+    @IBAction func randomColor(_ sender: UIButton) {
+        let red = CGFloat(arc4random_uniform(255))
+        let green = CGFloat(arc4random_uniform(255))
+        let blue = CGFloat(arc4random_uniform(255))
+        
+        self.datePicker.textColor = UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+        self.datePicker.reloadAllComponents()
+    }
+    @IBAction func yearStyle(_ sender: UIButton) {
+        self.datePicker.pickerType = .year
+        self.datePicker.reloadAllComponents()
+        self.datePicker.setDate(Date(), animated: false)
+    }
+    @IBAction func yearMonthStyle(_ sender: UIButton) {
+        self.datePicker.pickerType = .yearMonth
+        self.datePicker.reloadAllComponents()
+        self.datePicker.setDate(Date(), animated: false)
+    }
+    @IBAction func dateStyle(_ sender: UIButton) {
+        self.datePicker.pickerType = .date
+        self.datePicker.reloadAllComponents()
+        self.datePicker.setDate(Date(), animated: false)
+    }
+    @IBAction func dateTimeStyle(_ sender: UIButton) {
+        self.datePicker.pickerType = .dateTime
+        self.datePicker.reloadAllComponents()
+        self.datePicker.setDate(Date(), animated: false)
+    }
+    @IBAction func customStyle(_ sender: UIButton) {
+        self.datePicker.customPickerType = "hm"
+        self.datePicker.pickerType = .custom
+        self.datePicker.reloadAllComponents()
+        self.datePicker.setDate(Date(), animated: false)
+    }
+    @IBAction func toggleLocale(_ sender: UIButton) {
+        if self.datePicker.identifier == .persian {
+            self.datePicker.identifier = .gregorian
+            self.datePicker.locale = Locale(identifier: "en_US")
+        } else {
+            self.datePicker.identifier = .persian
+            self.datePicker.locale = Locale(identifier: "fa_IR")
+        }
+        self.datePicker.reloadAllComponents()
+        self.datePicker.setDate(Date(), animated: false)
+    }
 }
 
 extension ViewController: HEDatePickerDelegate {
     func pickerView(_ pickerView: HEDatePicker, didSelectRow row: Int, inComponent component: Int) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "fa_IR")
-        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
-        self.label.text = dateFormatter.string(from: pickerView.date)
     }
 }

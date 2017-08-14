@@ -38,7 +38,7 @@ public class HEDatePicker: UIControl {
     }
     public var identifier: Calendar.Identifier = .gregorian {
         didSet {
-            self.calendar = Calendar(identifier: .persian)
+            self.calendar = Calendar(identifier: identifier)
             self.updatePickerViewComponentValuesAnimated(false)
         }
     }
@@ -46,7 +46,7 @@ public class HEDatePicker: UIControl {
     public fileprivate(set) var date = Date()
 
     public var pickerType: HEDatePickerType = .dateTime
-    public var customPickerType = "yMdWhm"
+    public var customPickerType = ""
     
     // MARK: - Private Variables
     fileprivate let numberofYears = 200
@@ -120,6 +120,7 @@ public class HEDatePicker: UIControl {
      Reloads all of the components in the date picker.
      */
     public func reloadAllComponents() {
+        self.datePickerComponentOrdering = [HEDatePickerComponents]()
         self.refreshComponentOrdering()
         self.pickerView.reloadAllComponents()
     }
@@ -168,7 +169,7 @@ public class HEDatePicker: UIControl {
         if self.pickerType == .custom {
             format = self.customPickerType
         }
-            
+        
         format.characters.forEach { (component) in
             if let pickerComponent = HEDatePickerComponents(rawValue: component) {
                 self.datePickerComponentOrdering.append(pickerComponent)
@@ -395,7 +396,11 @@ public class HEDatePicker: UIControl {
      :returns: The date picker component type at the index.
      */
     fileprivate func componentAtIndex(_ index: Int) -> HEDatePickerComponents {
-        return self.datePickerComponentOrdering[index]
+        if self.datePickerComponentOrdering.count > index {
+            return self.datePickerComponentOrdering[index]
+        } else {
+            return HEDatePickerComponents.invalid
+        }
     }
     
     /**
@@ -536,10 +541,11 @@ extension HEDatePicker: UIPickerViewDelegate {
         
         label.font = self.font
         label.textColor = self.textColor
-        label.text = self.titleForRow(row, inComponentIndex: component).changeNumbers()
         if self.calendar.identifier == .persian {
+            label.text = self.titleForRow(row, inComponentIndex: component).changeNumbers()
             label.textAlignment = self.componentAtIndex(component) == .month ? .center : NSTextAlignment.center
         } else {
+            label.text = self.titleForRow(row, inComponentIndex: component)
             label.textAlignment = self.componentAtIndex(component) == .month ? NSTextAlignment.left : NSTextAlignment.right
         }
         label.textColor = self.isRowEnabled(row, forComponent: self.componentAtIndex(component)) ? self.textColor : self.disabledTextColor

@@ -1,9 +1,12 @@
+![logo](https://user-images.githubusercontent.com/17081655/29253088-0e39c158-808a-11e7-8430-7a5fdcf184d9.png)
+<br/><br/>
 # HEDatePicker
 
 [![CI Status](http://img.shields.io/travis/HassanEskandari/HEDatePicker.svg?style=flat)](https://travis-ci.org/HassanEskandari/HEDatePicker)
 [![Version](https://img.shields.io/cocoapods/v/HEDatePicker.svg?style=flat)](http://cocoapods.org/pods/HEDatePicker)
 [![License](https://img.shields.io/cocoapods/l/HEDatePicker.svg?style=flat)](http://cocoapods.org/pods/HEDatePicker)
 [![Platform](https://img.shields.io/cocoapods/p/HEDatePicker.svg?style=flat)](http://cocoapods.org/pods/HEDatePicker)
+[![Languages](https://img.shields.io/badge/Language-Swift%203.0-orange.svg)](https://img.shields.io/badge/Language-Swift%203.0-orange.svg)
 
 ## Description
 A custom UIDatePicker object that allows design customization of various user interface attributes such as font, color, etc. This pod
@@ -11,14 +14,13 @@ aims to replicate the default UIDatePicker functionality while adding additional
 
 This is project is inspired by and uses codes from [PIDatePicker](https://github.com/prolificinteractive/PIDatePicker).
 
-In addition to [PIDatePicker](https://github.com/prolificinteractive/PIDatePicker), [HEDatePicker](https://github.com/HassanEskandari/HEDatePicker) has the option to set picker type to one of .year, .yearMonth, .date, .dateTime.
+In addition it has the option to set picker type to one of .year, .yearMonth, .date, .dateTime.
 It is also possible to change calendar identifier.
 
 ## Example
+![HEDatePicker](https://user-images.githubusercontent.com/17081655/29281251-8097edc0-8133-11e7-86e0-2aad993081f3.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
