@@ -18,7 +18,7 @@ In addition it has the option to set picker type to one of .year, .yearMonth, .d
 It is also possible to change calendar identifier.
 
 ## Example
-![HEDatePicker](https://user-images.githubusercontent.com/17081655/29281251-8097edc0-8133-11e7-86e0-2aad993081f3.gif)
+![HEDatePicker](https://user-images.githubusercontent.com/17081655/29281251-8097edc0-8133-11e7-86e0-2aad993081f3.gif){:height="550px" width="310px"}
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
