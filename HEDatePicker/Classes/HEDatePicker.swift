@@ -243,9 +243,9 @@ public class HEDatePicker: UIControl {
     fileprivate func maximumRangeForComponent(_ component : HEDatePickerComponents) -> Range<Int> {
         var calendarUnit : Calendar.Component
         if component == .year {
-            var currentYear = self.date.year()
+            var currentYear = Date().year()
             if self.calendar.identifier == .persian {
-                currentYear = self.date.jalaali().year
+                currentYear = Date().jalaali().year
             }
             
             return Range(uncheckedBounds: (lower: currentYear - numberofYears / 2, upper: currentYear + numberofYears / 2))
