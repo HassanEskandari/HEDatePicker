@@ -170,7 +170,7 @@ public class HEDatePicker: UIControl {
             format = self.customPickerType
         }
         
-        format.characters.forEach { (component) in
+        format.forEach { (component) in
             if let pickerComponent = HEDatePickerComponents(rawValue: component) {
                 self.datePickerComponentOrdering.append(pickerComponent)
             }
@@ -557,7 +557,7 @@ extension HEDatePicker: UIPickerViewDelegate {
         let widthBuffer = 25.0
         
         let calendarComponent = self.componentAtIndex(component)
-        let stringSizingAttributes = [NSFontAttributeName : self.font]
+		let stringSizingAttributes = [NSAttributedStringKey.font : self.font]
         var size = 0.01
         
         if calendarComponent == .month {
@@ -565,25 +565,25 @@ extension HEDatePicker: UIPickerViewDelegate {
             
             // Get the length of the longest month string and set the size to it.
             for symbol in dateFormatter.monthSymbols as [String] {
-                let monthSize = NSString(string: symbol).size(attributes: stringSizingAttributes)
+				let monthSize = NSString(string: symbol).size(withAttributes: stringSizingAttributes)
                 size = max(size, Double(monthSize.width))
             }
         } else if calendarComponent == .day{
             // Pad the day string to two digits
             let dayComponentSizingString = NSString(string: "00")
-            size = Double(dayComponentSizingString.size(attributes: stringSizingAttributes).width)
+			size = Double(dayComponentSizingString.size(withAttributes: stringSizingAttributes).width)
         } else if calendarComponent == .year  {
             // Pad the year string to four digits.
             let yearComponentSizingString = NSString(string: "00")
-            size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)
+			size = Double(yearComponentSizingString.size(withAttributes: stringSizingAttributes).width)
         } else if calendarComponent == .hour  {
             // Pad the year string to four digits.
             let yearComponentSizingString = NSString(string: "00")
-            size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)
+			size = Double(yearComponentSizingString.size(withAttributes: stringSizingAttributes).width)
         } else if calendarComponent == .minute  {
             // Pad the year string to four digits.
             let yearComponentSizingString = NSString(string: "00")
-            size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)
+			size = Double(yearComponentSizingString.size(withAttributes: stringSizingAttributes).width)
         } else if (calendarComponent == .space) {
             size = 20.0
         }
@@ -615,9 +615,9 @@ extension HEDatePicker: UIPickerViewDataSource {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if self.pickerType == .custom {
-            return self.customPickerType.characters.count
+            return self.customPickerType.count
         } else {
-            return self.pickerType.rawValue.characters.count
+            return self.pickerType.rawValue.count
         }
     }
 }
