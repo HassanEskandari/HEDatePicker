@@ -199,7 +199,7 @@ public class HEDatePicker: UIControl {
         let dateComponent = self.componentAtIndex(componentIndex)
         
         let value = self.rawValueForRow(row, inComponent: dateComponent)
-        
+      
         if dateComponent == HEDatePickerComponents.month {
             let dateFormatter = self.dateFormatter()
             return dateFormatter.monthSymbols[value - 1]
@@ -247,17 +247,10 @@ public class HEDatePicker: UIControl {
             if self.calendar.identifier == .persian {
                 currentYear = Date().jalaali().year
             }
-            
+          
             return Range(uncheckedBounds: (lower: currentYear - numberofYears / 2, upper: currentYear + numberofYears / 2))
             
         } else if component == .day {
-//            var currentMonth = self.date.month()
-//            var currentYear = self.date.year()
-//            if self.calendar.identifier == .persian {
-//                currentMonth = self.date.jalaali().month
-//                currentYear = self.date.jalaali().year
-//            }
-//            return Range(uncheckedBounds: (lower: 1, upper: self.numberOfDaysForMonth(currentMonth, inYear: currentYear) + 1))
             calendarUnit = .day
         } else if component == .month {
             calendarUnit = .month
@@ -543,10 +536,10 @@ extension HEDatePicker: UIPickerViewDelegate {
         label.textColor = self.textColor
         if self.calendar.identifier == .persian {
             label.text = self.titleForRow(row, inComponentIndex: component).changeNumbers()
-            label.textAlignment = self.componentAtIndex(component) == .month ? .center : NSTextAlignment.center
+            label.textAlignment = .center
         } else {
             label.text = self.titleForRow(row, inComponentIndex: component)
-            label.textAlignment = self.componentAtIndex(component) == .month ? NSTextAlignment.left : NSTextAlignment.right
+            label.textAlignment = self.componentAtIndex(component) == .month ? .left : .right
         }
         label.textColor = self.isRowEnabled(row, forComponent: self.componentAtIndex(component)) ? self.textColor : self.disabledTextColor
         
@@ -557,7 +550,7 @@ extension HEDatePicker: UIPickerViewDelegate {
         let widthBuffer = 25.0
         
         let calendarComponent = self.componentAtIndex(component)
-		let stringSizingAttributes = [NSAttributedStringKey.font : self.font]
+		let stringSizingAttributes = [NSAttributedString.Key.font : self.font]
         var size = 0.01
         
         if calendarComponent == .month {

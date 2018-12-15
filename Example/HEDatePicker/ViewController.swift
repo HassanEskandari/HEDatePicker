@@ -32,10 +32,13 @@ class ViewController: UIViewController {
     @IBAction func randomFont(_ sender: UIButton) {
         let familyNames = UIFont.familyNames
         let randomNumber = Int(arc4random_uniform(UInt32(familyNames.count)))
-        let familyName: String = familyNames[randomNumber]
-        let fontName: String = UIFont.fontNames(forFamilyName: familyName)[0]
-        self.datePicker.font = UIFont(name: fontName, size: 14)!
-        self.datePicker.reloadAllComponents()
+        let familyName = familyNames[randomNumber]
+        let fontNames = UIFont.fontNames(forFamilyName: familyName)
+        if fontNames.count > 0 {
+          let fontName = fontNames[0]
+          self.datePicker.font = UIFont(name: fontName, size: 14)!
+          self.datePicker.reloadAllComponents()
+        }
     }
     @IBAction func randomColor(_ sender: UIButton) {
         let red = CGFloat(arc4random_uniform(255))
