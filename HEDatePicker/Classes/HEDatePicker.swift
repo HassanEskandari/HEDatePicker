@@ -492,6 +492,10 @@ public class HEDatePicker: UIControl {
 // MARK: - Protocols
 // MARK: UIPickerViewDelegate
 extension HEDatePicker: UIPickerViewDelegate {
+    public func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return font.lineHeight + 10
+    }
+
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let datePickerComponent = self.componentAtIndex(component)
         let value = self.rawValueForRow(row, inComponent: datePickerComponent)
